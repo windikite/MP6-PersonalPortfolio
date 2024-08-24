@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chris' Portfolio</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Welcome to my portfolio!</h2>
+            <p>I'm a software developer with a variety of experience in both front-end and back-end technologies looking to break into my first role in a team I can learn and grow with!</p>
+        </section>
+        <div class="flex-wrap-container">
+            <section class="flex-wrap-item">
+                <h2>About Me</h2>
+                <div class="container flex-wrap-container">
+                    <figure class="flex-wrap-item">
+                        <img src="me.jpg" alt="A picture of me">
+                        <figcaption>^ me</figcaption>
+                    </figure>
+                    <p class="flex-wrap-item">I am based out of New York and am amenable to in-person, remote or flex offers. Learning new systems and creating effective solutions is very rewarding for me, so I'm excited for what comes next in my career.</p>
+                </div>
+            </section>
+            <section class="flex-wrap-item">
+                <h2>Skills</h2>
+                <div class="container">
+                    <div>
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>Flask</li>
+                            <li>Node</li>
+                            <li>Express</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>SQLalchemy</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <section>
+            <h2>Projects</h2>
+            <div class="flex-wrap-container">
+                <article class="flex-wrap-item">
+                    <h3>E-Commerce API</h3>
+                    <p>This is a flask application that uses SQLalchemy to streamline and simplify interaction with an e-commerce database which it creates. It has endpoints that allow for full CRUD and automatically creates the tables it needs provided the database exists. As a note for it's functionality, it does utilize cascade deletion to prevent data integrity errors with orphaned entries in the tables. So, deleting a customer will delete their account, orders, and entries on the order_product table. It will not, however, delete references to deleted products in orders when a product is deleted.</p>
+                    <a href="https://github.com/windikite/MP5-E-CommerceAPI"><strong>GitHub</strong></a>
+                </article>
+                <article class="flex-wrap-item">
+                    <h3>Fitness Center API</h3>
+                    <p>This is a flask application that uses SQLalchemy to streamline and simplify interaction with a fitness database which it creates. This is the same database I used in earlier projects, just refined. It has endpoints that allow for full CRUD and automatically creates the tables it needs provided the database exists. As a note for it's functionality, it will create the tables using ondelete='Cascade' on the foreign key "member_id" on workout_sessions, so that when a member is deleted the database itself will delete any would-be lingering entries.</p>
+                    <a href="https://github.com/windikite/Flask-SQLAlchemyFitnessCenterManagement"><strong>GitHub</strong></a>
+                </article>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Contact</h2>
+            <div class="container">
+                <div class="card">
+                    <p>Thanks for reaching the end of my portfolio! Questions or opportunities? Either contact me on Github or LinkedIn, or enter your email address and message here!</p>
+                </div>
+                <div class="card">
+                    <div id="contact-links" class="container">
+                        <a href="">GitHub</a>
+                        <a href="">LinkedIn</a>
+                    </div>
+                    <div id="email-form">
+                        <p>Enter your email to get in contact!</p>
+                        <form action="/">
+                            <label for="email">Enter:</label>
+                            <input type="email" id="email" name="email" placeholder="example@example.com"> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
